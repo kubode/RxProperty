@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RxProperty.iml" filepath="$PROJECT_DIR$/.idea/modules/RxProperty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty.iml" group="rxproperty" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_main.iml" group="rxproperty" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_test.iml" group="rxproperty" />
+    </modules>
+  </component>
+</project>

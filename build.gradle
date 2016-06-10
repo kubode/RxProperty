@@ -1,0 +1,35 @@
+buildscript {
+    ext.versions = [
+            compileSdkVersion: 23,
+            buildToolsVersion: '23.0.3',
+            minSdkVersion    : 16,
+            targetSdkVersion : 23
+    ]
+    ext.dependencyNotations = [
+            androidPlugin     : 'com.android.tools.build:gradle:2.1.2',
+            bintrayPlugin     : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6',
+            androidMavenPlugin: 'com.github.dcendents:android-maven-gradle-plugin:1.3',
+            findBugsJsr305    : 'com.google.code.findbugs:jsr305:3.0.1',
+            jUnit             : 'junit:junit:4.12',
+            rxJava            : 'io.reactivex:rxjava:1.1.5'
+    ]
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath dependencyNotations.androidPlugin
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath dependencyNotations.bintrayPlugin
+        classpath dependencyNotations.androidMavenPlugin
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+    group 'com.github.kubode.rxproperty'
+    version '1.0-SNAPSHOT'
+}
