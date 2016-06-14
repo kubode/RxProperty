@@ -92,4 +92,15 @@ public class VariableTest {
         var.subscribe(onNext);
         assertEquals("test", emitted);
     }
+
+    @Test
+    public void getDefaultValue() {
+        assertEquals("defaultValue", var.getValue());
+    }
+
+    @Test
+    public void getHoldValue() {
+        var.setValue("test");
+        assertEquals("test", var.getValue());
+    }
 }
