@@ -8,4 +8,5 @@ sourceSets.all {
 
 dependencies {
     compile dependencyNotations.kotlin
+    compile project(':rxproperty')
 }
