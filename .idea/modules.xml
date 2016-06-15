@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RxProperty.iml" filepath="$PROJECT_DIR$/.idea/modules/RxProperty.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty.iml" group="rxproperty" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin.iml" group="rxproperty-kotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin_main.iml" group="rxproperty-kotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty-kotlin/rxproperty-kotlin_test.iml" group="rxproperty-kotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_main.iml" group="rxproperty" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rxproperty/rxproperty_test.iml" group="rxproperty" />
     </modules>

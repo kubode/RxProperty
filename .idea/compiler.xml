@@ -20,9 +20,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RxProperty_main" target="1.5" />
+      <module name="rxproperty-kotlin_main" target="1.8" />
+      <module name="rxproperty-kotlin_test" target="1.8" />
       <module name="rxproperty_main" target="1.7" />
-      <module name="RxProperty_test" target="1.5" />
       <module name="rxproperty_test" target="1.7" />
     </bytecodeTargetLevel>
   </component>

@@ -1,0 +1,11 @@
+description 'RxProperty kotlin'
+
+apply plugin: 'kotlin'
+
+sourceSets.all {
+    java.srcDirs += "src/${name}/kotlin"
+}
+
+dependencies {
+    compile dependencyNotations.kotlin
+}
