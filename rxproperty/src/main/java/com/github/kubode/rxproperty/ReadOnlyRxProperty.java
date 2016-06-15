@@ -7,7 +7,7 @@ import javax.annotation.Nonnull;
 
 public class ReadOnlyRxProperty<T> extends Observable<T> {
 
-    interface State<T> {
+    public interface State<T> {
 
         @Nonnull
         Observable<T> getObservable();
