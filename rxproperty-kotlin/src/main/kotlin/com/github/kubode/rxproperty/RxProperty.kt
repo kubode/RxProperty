@@ -1,3 +1,6 @@
+/**
+ * Classes in this module overrides `value` property to provide null safety access for Kotlin.
+ */
 package com.github.kubode.rxproperty
 
 class ReadOnlyRxPropertyKt<T>(state: ReadOnlyRxProperty.State<T>) : ReadOnlyRxProperty<T>(state) {
