@@ -14,7 +14,8 @@ buildscript {
             jUnit             : 'junit:junit:4.12',
             rxJava            : 'io.reactivex:rxjava:1.1.5',
             kotlinPlugin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
-            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+            kotlinTest        : "org.jetbrains.kotlin:kotlin-test:${versions.kotlin}"
     ]
     repositories {
         jcenter()
