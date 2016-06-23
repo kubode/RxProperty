@@ -21,7 +21,7 @@ dependencies {
 RxProperty has following extensible classes.
 
 | Class Name | Extensible | Description |
-|---|---|
+| --- | --- | --- |
 | `ReadOnlyObservableProperty` | true | Read only. |
 | `Constant` | false | Unmodifiable. |
 | `ObservableProperty` | true | Rewritable. |
