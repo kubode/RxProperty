@@ -1,4 +1,4 @@
-description 'RxProperty'
+description 'A library for observe value of property using RxJava.'
 
 apply plugin: 'java'
 

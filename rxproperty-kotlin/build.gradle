@@ -1,4 +1,4 @@
-description 'RxProperty kotlin'
+description 'RxProperty kotlin module.'
 
 apply plugin: 'kotlin'
 
