@@ -2,16 +2,22 @@ package com.github.kubode.rxproperty;
 
 import rx.subjects.BehaviorSubject;
 
-public class EmptyVariable<T> extends RxProperty<T> {
+/**
+ * A lazy-initialize {@link Variable}.
+ * <p>
+ * Value is initialized not during object construction time but at {@link #setValue(Object)} called time.
+ * Trying to read the property before the initial value has been assigned results <code>null</code>.
+ * Trying to subscribe to the property before the initial value has been assigned emits no value.
+ * </p>
+ *
+ * @param <T> the type of this property.
+ */
+public class EmptyVariable<T> extends ObservableProperty<T> {
 
-    private static class State<T> extends Variable.State<T> {
-
-        private State() {
-            super(BehaviorSubject.<T>create());
-        }
-    }
-
+    /**
+     * Creates an EmptyVariable.
+     */
     public EmptyVariable() {
-        super(new State<T>());
+        super(new Variable.State<>(BehaviorSubject.<T>create()));
     }
 }

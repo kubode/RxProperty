@@ -8,7 +8,7 @@ import kotlin.reflect.KProperty
  * Overrides `value` property to provide null safety access for Kotlin.
  * @see ReadOnlyObservableProperty
  */
-class ReadOnlyObservablePropertyKt<T>(delegate: Delegate<T>) : ReadOnlyObservableProperty<T>(delegate) {
+class ReadOnlyObservablePropertyKt<T>(state: State<T>) : ReadOnlyObservableProperty<T>(state) {
     override fun getValue(): T = super.getValue()
 }
 
@@ -24,7 +24,7 @@ class ConstantKt<T>(value: T) : Constant<T>(value) {
  * Overrides `value` property to provide null safety access for Kotlin.
  * @see ObservableProperty
  */
-class ObservablePropertyKt<T>(state: Delegate<T>) : ObservableProperty<T>(state) {
+class ObservablePropertyKt<T>(state: State<T>) : ObservableProperty<T>(state) {
     override fun setValue(value: T) = super.setValue(value)
     override fun getValue(): T = super.getValue()
 }
@@ -50,7 +50,7 @@ class EmptyVariableKt<T>() : EmptyVariable<T>() {
 /**
  * @see ReadOnlyObservablePropertyKt
  */
-fun <T> readOnlyRxProperty(delegate: ReadOnlyObservableProperty.Delegate<T>) = ReadOnlyObservablePropertyKt(delegate)
+fun <T> readOnlyRxProperty(state: ReadOnlyObservableProperty.State<T>) = ReadOnlyObservablePropertyKt(state)
 
 /**
  * @see ConstantKt
@@ -60,7 +60,7 @@ fun <T> constant(value: T) = ConstantKt(value)
 /**
  * @see ObservablePropertyKt
  */
-fun <T> rxProperty(state: ObservableProperty.Delegate<T>) = ObservablePropertyKt(state)
+fun <T> rxProperty(state: ObservableProperty.State<T>) = ObservablePropertyKt(state)
 
 /**
  * @see VariableKt
