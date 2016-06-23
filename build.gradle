@@ -1,10 +1,10 @@
 buildscript {
     ext.versions = [
             compileSdkVersion: 23,
-            buildToolsVersion: '23.0.3',
+            buildToolsVersion: '24.0.0',
             minSdkVersion    : 16,
             targetSdkVersion : 23,
-            kotlin           : '1.0.2'
+            kotlin           : '1.0.2-1'
     ]
     ext.dependencyNotations = [
             androidPlugin     : 'com.android.tools.build:gradle:2.1.2',
