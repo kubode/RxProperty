@@ -5,6 +5,7 @@ A library for observe value of property using RxJava.
 
 [![GitHub release](https://img.shields.io/github/release/kubode/RxProperty.svg?maxAge=2592000)]()
 [![Build Status](https://travis-ci.org/kubode/RxProperty.svg?branch=master)](https://travis-ci.org/kubode/RxProperty)
+[![license](https://img.shields.io/github/license/kubode/RxProperty.svg?maxAge=2592000)]()
 
 
 Usage
