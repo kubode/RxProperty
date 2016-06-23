@@ -5,8 +5,6 @@ import rx.Observer;
 import rx.subjects.BehaviorSubject;
 import rx.subjects.SerializedSubject;
 
-import javax.annotation.Nonnull;
-
 /**
  * {@link ObservableProperty} that emits the most recent item it has observed and all subsequent observed items to each
  * subscribed {@link Observer}.
@@ -33,12 +31,11 @@ public class Variable<T> extends ObservableProperty<T> {
         /**
          * Visible for EmptyVariable.
          */
-        State(@Nonnull BehaviorSubject<T> behaviorSubject) {
+        State(BehaviorSubject<T> behaviorSubject) {
             this.behaviorSubject = behaviorSubject;
             this.serializedSubject = behaviorSubject.toSerialized();
         }
 
-        @Nonnull
         @Override
         public Observable<T> getObservable() {
             return serializedSubject.distinctUntilChanged();

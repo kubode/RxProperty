@@ -3,8 +3,6 @@ package com.github.kubode.rxproperty;
 import rx.Observable;
 import rx.Observer;
 
-import javax.annotation.Nonnull;
-
 /**
  * {@link Observable} that emits the most recent item it has observed and all subsequent observed items to each
  * subscribed {@link Observer}.
@@ -37,7 +35,7 @@ public class ObservableProperty<T> extends ReadOnlyObservableProperty<T> {
      *
      * @param state a state of this property.
      */
-    public ObservableProperty(@Nonnull State<T> state) {
+    public ObservableProperty(State<T> state) {
         super(state);
         this.state = state;
     }

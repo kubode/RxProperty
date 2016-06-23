@@ -4,8 +4,6 @@ import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
 
-import javax.annotation.Nonnull;
-
 /**
  * Read-only Observable property.
  *
@@ -27,7 +25,6 @@ public class ReadOnlyObservableProperty<T> extends Observable<T> {
          * @return an {@link Observable} that emits the most recent value it has observed
          * and all subsequent observed items to each subscribed {@link Observer}.
          */
-        @Nonnull
         Observable<T> getObservable();
 
         /**
@@ -45,7 +42,7 @@ public class ReadOnlyObservableProperty<T> extends Observable<T> {
      *
      * @param state a state of this property.
      */
-    public ReadOnlyObservableProperty(@Nonnull final State<T> state) {
+    public ReadOnlyObservableProperty(final State<T> state) {
         super(new OnSubscribe<T>() {
             @Override
             public void call(Subscriber<? super T> subscriber) {

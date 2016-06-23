@@ -2,8 +2,6 @@ package com.github.kubode.rxproperty;
 
 import rx.Observable;
 
-import javax.annotation.Nonnull;
-
 /**
  * A constant {@link ReadOnlyObservableProperty}.
  * <p>
@@ -25,7 +23,6 @@ public class Constant<T> extends ReadOnlyObservableProperty<T> {
             this.value = value;
         }
 
-        @Nonnull
         @Override
         public Observable<T> getObservable() {
             return observable;

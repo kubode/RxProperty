@@ -7,6 +7,5 @@ targetCompatibility = 1.7
 
 dependencies {
     testCompile dependencyNotations.jUnit
-    compile dependencyNotations.findBugsJsr305
     compile dependencyNotations.rxJava
 }
