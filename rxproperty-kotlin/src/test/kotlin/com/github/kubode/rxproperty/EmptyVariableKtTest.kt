@@ -14,4 +14,8 @@ class EmptyVariableKtTest {
         val value = emptyVariable<String?>().value
         assertNull(value)
     }
+
+    @Test(expected = Exception::class) fun failSetNullIfNotNullType() {
+        emptyVariable<String>().value = Java.getNull()
+    }
 }
