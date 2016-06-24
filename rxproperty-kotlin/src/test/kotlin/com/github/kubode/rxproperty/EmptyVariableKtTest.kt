@@ -1,7 +1,7 @@
 package com.github.kubode.rxproperty
 
 import org.junit.Test
-import kotlin.test.assertNull
+import kotlin.test.assertEquals
 
 class EmptyVariableKtTest {
 
@@ -10,9 +10,10 @@ class EmptyVariableKtTest {
         value.length
     }
 
-    @Test fun defaultValueIsNull() {
-        val value = emptyVariable<String?>().value
-        assertNull(value)
+    @Test fun setAndGet() {
+        val variable = emptyVariable<String>()
+        variable.value = ""
+        assertEquals("", variable.value)
     }
 
     @Test(expected = Exception::class) fun failSetNullIfNotNullType() {
