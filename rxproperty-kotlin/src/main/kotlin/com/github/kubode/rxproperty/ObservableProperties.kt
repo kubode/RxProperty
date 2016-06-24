@@ -50,7 +50,7 @@ class EmptyVariableKt<T>() : EmptyVariable<T>() {
 /**
  * @see ReadOnlyObservablePropertyKt
  */
-fun <T> readOnlyRxProperty(state: ReadOnlyObservableProperty.State<T>) = ReadOnlyObservablePropertyKt(state)
+fun <T> readOnlyObservableProperty(state: ReadOnlyObservableProperty.State<T>) = ReadOnlyObservablePropertyKt(state)
 
 /**
  * @see ConstantKt
@@ -60,7 +60,7 @@ fun <T> constant(value: T) = ConstantKt(value)
 /**
  * @see ObservablePropertyKt
  */
-fun <T> rxProperty(state: ObservableProperty.State<T>) = ObservablePropertyKt(state)
+fun <T> observableProperty(state: ObservableProperty.State<T>) = ObservablePropertyKt(state)
 
 /**
  * @see VariableKt
