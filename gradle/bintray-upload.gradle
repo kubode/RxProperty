@@ -1,0 +1,49 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+}
+
+def acquireUser() {
+    return System.env.BINTRAY_USER ?: (hasProperty('bintrayUser') ? bintrayUser : 'nouser')
+}
+def acquireKey() {
+    return System.env.BINTRAY_KEY ?: (hasProperty('bintrayKey') ? bintrayKey : 'nokey')
+}
+
+bintray {
+    user = acquireUser()
+    key = acquireKey()
+    publications = ['maven']
+    pkg {
+        repo = 'maven'
+        name = "${project.group}:${project.name}"
+        desc = project.description
+        websiteUrl = 'https://github.com/kubode/RxProperty'
+        issueTrackerUrl = 'https://github.com/kubode/RxProperty/issues'
+        vcsUrl = 'https://github.com/kubode/RxProperty.git'
+        licenses = ['Apache-2.0']
+        labels = ['RxJava']
+        publicDownloadNumbers = true
+        githubRepo = 'kubode/RxProperty'
+        githubReleaseNotesFile = 'CHANGELOG.md'
+        version.name = project.version
+    }
+}

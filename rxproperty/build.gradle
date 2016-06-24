@@ -13,3 +13,5 @@ dependencies {
 
 jacocoTestReport.reports.xml.enabled true
 check.dependsOn jacocoTestReport
+
+apply from: rootProject.file('gradle/bintray-upload.gradle')
