@@ -55,7 +55,7 @@ public class ReadOnlyObservableProperty<T> extends Observable<T> {
     /**
      * Get value of this property.
      *
-     * @return value of {@link #state#getValue()}.
+     * @return value of this property.
      */
     public T getValue() {
         return state.getValue();
