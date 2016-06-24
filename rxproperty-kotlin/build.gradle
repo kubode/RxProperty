@@ -1,6 +1,7 @@
 description 'RxProperty kotlin module.'
 
 apply plugin: 'kotlin'
+apply plugin: 'jacoco'
 
 sourceSets.all {
     java.srcDirs += "src/${name}/kotlin"
