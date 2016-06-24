@@ -10,3 +10,6 @@ dependencies {
     testCompile dependencyNotations.jUnit
     compile dependencyNotations.rxJava
 }
+
+jacocoTestReport.reports.xml.enabled true
+check.dependsOn jacocoTestReport

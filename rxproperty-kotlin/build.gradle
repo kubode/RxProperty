@@ -13,3 +13,6 @@ dependencies {
     compile dependencyNotations.kotlin
     compile project(':rxproperty')
 }
+
+jacocoTestReport.reports.xml.enabled true
+check.dependsOn jacocoTestReport
