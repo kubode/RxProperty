@@ -14,6 +14,9 @@ Usage
 Add dependency notation to `build.gradle`.
 
 ```gradle
+repositories {
+    jcenter()
+}
 dependencies {
     compile "com.github.kubode.rxproperty:rxproperty:$latestVersion"
 }
