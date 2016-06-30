@@ -23,15 +23,17 @@ dependencies {
 }
 ```
 
-RxProperty has following extensible classes.
+RxProperty has following classes.
 
-| Class Name | Extensible | Description |
+| Class Name | Description |
 | --- | --- | --- |
-| `ReadOnlyObservableProperty` | true | Read only. |
-| `Constant` | false | Unmodifiable. |
-| `ObservableProperty` | true | Rewritable. |
-| `Variable` | false | Rewritable. |
-| `EmptyVariable` | false | Lazy initialization `Variable`. |
+| `ReadOnlyObservableProperty` | Extensible, read-only. |
+| `ObservableProperty` | Extensible, rewritable. |
+| `Constant` | Constant value implementation. |
+| `Variable` | Variable implementation. |
+| `EmptyVariable` | Lazy initialization variable. |
+
+For more information, please see javadoc.
 
 This is an example of `Variable`.
 
