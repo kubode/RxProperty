@@ -71,6 +71,26 @@ public class TickState implements ReadOnlyObservableProperty.State<Long> {
 }
 ```
 
+RxProperty has extension for Kotlin.
+
+Add dependency notation to `build.gradle`.
+
+```gradle
+repositories {
+    jcenter()
+}
+dependencies {
+    compile "com.github.kubode.rxproperty:rxproperty-kotlin:$latestVersion"
+}
+```
+
+`ObservableProperty.value` can access null-safety.
+
+```kotlin
+val str = variable("test")
+str.value.length // str.value type is String, not String!.
+```
+
 
 License
 ---
