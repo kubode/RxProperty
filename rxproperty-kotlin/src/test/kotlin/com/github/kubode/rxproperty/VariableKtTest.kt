@@ -7,13 +7,13 @@ import kotlin.test.assertNull
 class VariableKtTest {
 
     @Test fun nullable() {
-        val variable = variable(null as String?)
+        val variable = RxProperties.variable(null as String?)
         assertNull(variable.value)
         variable.value = ""
         assertEquals("", variable.value)
     }
 
     @Test(expected = Exception::class) fun failSetNullIfNotNullType() {
-        variable("").value = Java.getNull()
+        RxProperties.variable("").value = Java.getNull()
     }
 }

@@ -7,7 +7,7 @@ import rx.Observable
 class ReadOnlyObservablePropertyKtTest {
 
     @Test fun test() {
-        val p = readOnlyObservableProperty(object : ReadOnlyObservableProperty.State<Int> {
+        val p = RxProperties.readOnlyObservable(object : ReadOnlyObservableProperty.State<Int> {
             override fun getObservable() = Observable.just(1)
             override fun getValue() = 2
         })
