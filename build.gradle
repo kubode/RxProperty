@@ -1,9 +1,9 @@
 buildscript {
     ext.versions = [
-            kotlin           : '1.0.2-1'
+            kotlin           : '1.0.3'
     ]
     ext.dependencyNotations = [
-            bintrayPlugin     : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6',
+            bintrayPlugin     : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7',
             jUnit             : 'junit:junit:4.12',
             rxJava            : 'io.reactivex:rxjava:1.1.5',
             kotlinPlugin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
