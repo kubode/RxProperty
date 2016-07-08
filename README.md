@@ -25,13 +25,7 @@ dependencies {
 
 RxProperty has following classes.
 
-| Class Name | Description |
-| --- | --- | --- |
-| `ReadOnlyObservableProperty` | Extensible, read-only. |
-| `ObservableProperty` | Extensible, rewritable. |
-| `Constant` | Constant value implementation. |
-| `Variable` | Variable implementation. |
-| `EmptyVariable` | Lazy initialization variable. |
+[![Class diagram](https://raw.githubusercontent.com/kubode/RxProperty/master/img/class-diagram.svg)]
 
 For more information, please see javadoc.
 
