@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/c0de8bc140e3079c93f2970be853d310602a5ddb/gradle.gitignore
+### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/gradle.gitignore
 
 .gradle
 /build/
@@ -16,7 +16,7 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 
-### https://raw.github.com/github/gitignore/c0de8bc140e3079c93f2970be853d310602a5ddb/java.gitignore
+### https://raw.github.com/github/gitignore/ef8772f1346e95272f6ee2fa76ce502c88444a7b/java.gitignore
 
 *.class
 

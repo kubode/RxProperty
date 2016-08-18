@@ -1,14 +1,14 @@
 buildscript {
     ext.versions = [
-            kotlin           : '1.0.3'
+            kotlin: '1.0.3'
     ]
     ext.dependencyNotations = [
-            bintrayPlugin     : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7',
-            jUnit             : 'junit:junit:4.12',
-            rxJava            : 'io.reactivex:rxjava:1.1.6',
-            kotlinPlugin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
-            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
-            kotlinTest        : "org.jetbrains.kotlin:kotlin-test:${versions.kotlin}"
+            bintrayPlugin: 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1',
+            jUnit        : 'junit:junit:4.12',
+            rxJava       : 'io.reactivex:rxjava:1.1.9',
+            kotlinPlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+            kotlin       : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+            kotlinTest   : "org.jetbrains.kotlin:kotlin-test:${versions.kotlin}"
     ]
     repositories {
         jcenter()
