@@ -12,7 +12,7 @@ A library for observe value of property using RxJava.
 Usage
 ---
 
-Add dependency notation to `build.gradle`.
+Add dependency notations to `build.gradle`.
 
 ```gradle
 repositories {
@@ -65,9 +65,13 @@ public class TickState implements ReadOnlyObservableProperty.State<Long> {
 }
 ```
 
+
+Kotlin
+---
+
 RxProperty has extension for Kotlin.
 
-Add dependency notation to `build.gradle`.
+Add dependency notations to `build.gradle`.
 
 ```gradle
 repositories {
@@ -81,7 +85,7 @@ dependencies {
 `ObservableProperty.value` can access null-safety.
 
 ```kotlin
-val str = variable("test")
+val str = RxProperties.variable("test")
 str.value.length // str.value type is String, not String!.
 ```
 
