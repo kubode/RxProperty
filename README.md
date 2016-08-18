@@ -48,19 +48,44 @@ class Sample {
 
 `ReadOnlyObservableProperty` and `ObservableProperty` are extensible by implementing `State`.
 
+This is an example of `SharedPreferences`.
+
 ```java
-public class TickState implements ReadOnlyObservableProperty.State<Long> {
-    @Override public Observable<Long> getObservable() {
-        return Observable.interval(0, 1, TimeUnit.SECONDS).map(tick -> getValue());
+public class StringSharedPreferencesState implements ObservableProperty.State<String> {
+    private final SharedPreferences sharedPreferences;
+    private final String key;
+
+    public StringSharedPreferencesState(SharedPreferences sharedPreferences, String key) {
+        this.sharedPreferences = sharedPreferences;
+        this.key = key;
     }
-    @Override public Long getValue() {
-        return System.currentTimeMillis();
+
+    @Override public Observable<String> getObservable() {
+        return Observable.fromAsync(emitter -> {
+            SharedPreferences.OnSharedPreferenceChangeListener listener = (sharedPreferences, key) -> {
+                if (key.equals(this.key)) {
+                    emitter.onNext(getValue());
+                }
+            };
+            sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
+            emitter.setCancellation(() -> sharedPreferences.unregisterOnSharedPreferenceChangeListener(listener));
+        }, AsyncEmitter.BackpressureMode.BUFFER);
     }
-    public static void main(String... args) throws InterruptedException {
-        ReadOnlyObservableProperty<Long> p = new ReadOnlyObservableProperty<>(new TickState());
-        System.out.println(p.getValue());
-        p.subscribe(System.out::println);
-        Thread.sleep(10000);
+
+    @Override public String getValue() {
+        return sharedPreferences.getString(key, null);
+    }
+
+    @Override public void setValue(String value) {
+        sharedPreferences.edit().putString(key, value).apply();
+    }
+}
+
+public class Model {
+    public final ObservableProperty<String> str;
+
+    public Model(SharedPreferences sharedPreferences) {
+        str = new ObservableProperty<>(new StringSharedPreferencesState(sharedPreferences, "str"));
     }
 }
 ```
