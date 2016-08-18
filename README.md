@@ -25,7 +25,7 @@ dependencies {
 
 RxProperty has following classes.
 
-[![Class diagram](https://raw.githubusercontent.com/kubode/RxProperty/master/img/class-diagram.svg)]
+[![Class diagram](https://cdn.rawgit.com/kubode/RxProperty/master/img/class-diagram.svg)]()
 
 For more information, please see javadoc.
 
